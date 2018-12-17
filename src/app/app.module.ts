@@ -9,6 +9,7 @@ import { CartComponent } from './cart/cart.component';
 import { BookService } from './book.service';
 import { OfferService } from './offer.service';
 import { HeaderComponent } from './header/header.component';
+import { LocalStorageService } from './local-storage.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HeaderComponent } from './header/header.component';
   providers: [
     BookService,
     OfferService,
+    LocalStorageService,
   ],
   bootstrap: [AppComponent]
 })

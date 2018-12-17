@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row book-section" *ngFor="let book of books">
+    <div class="col-xs-3">
+      <div class="card">
+        <img class="card-img book-cover" src="../../assets/imgs/{{book.cover}}" alt="Card image">
+      </div>
+    </div>
+    <div class="col-xs-9 book-info">
+      <h6 class="book-title">{{book.title}}</h6>
+      <h6 class="book-price">Price : {{book.price}}€</h6>
+      <div class="synopsis">
+        <input id="{{book.isbn}}" type="checkbox">
+        <label for="{{book.isbn}}"></label>
+        <div class="synopsis-text">
+          <p *ngFor="let synopsis of book.synopsis">{{synopsis}}</p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-dark btn-add-cart" (click)="cart($event,book.isbn)" >Add to cart <i class="fa fa-cart-plus"></i></button>
+    </div>
+  </div>
+</div>

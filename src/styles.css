@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+    font-family: 'Harry-Potter';
+    src:url('./assets/fonts/Harry-Potter.ttf.woff') format('woff'),
+        url('./assets/fonts/Harry-Potter.ttf.svg#Harry-Potter') format('svg'),
+        url('./assets/fonts/Harry-Potter.ttf.eot'),
+        url('./assets/fonts/Harry-Potter.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+  font-family: 'Roboto';
+}

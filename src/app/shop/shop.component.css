@@ -1,0 +1,68 @@
+.book-cover {
+  width: 10rem;
+  height: 15rem;
+}
+
+.book-section {
+  margin: 2rem;
+}
+
+.book-section:nth-child(odd) {
+  background-color: #F1F1F1;
+}
+
+.book-section:first-child {
+  margin: 7rem 2rem 2rem 2rem;
+}
+
+.book-info {
+  padding: 1rem 3rem;
+}
+
+.book-title {
+  font-family: 'Harry-Potter';
+}
+
+.book-price {
+  margin: 1rem 0;
+  color: #6A899D;
+  font-weight: bold;
+}
+
+.btn-add-cart {
+  margin-top: 2.5rem;
+}
+
+.synopsis-text {
+  height: 50px;
+  width: 40rem;
+  font-size: 0.7rem;
+  overflow: hidden;
+}
+
+.synopsis {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 100%;
+  font-size: 0.7rem;
+  color: #6A899D;
+}
+
+input {
+  display: none;
+}
+
+label:after {
+  content: "Show More +";
+}
+
+input:checked+label:after {
+  content: "Show Less -";
+}
+
+input:checked~div {
+  height: 100%;
+}

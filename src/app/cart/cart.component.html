@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-2 cart-item" *ngFor="let book of cartBooks">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img cart-item-img" src="../../assets/imgs/{{book.cover}}" alt="Card image">
+        <div class="card-body">
+          <h5 class="card-title">{{book.title}}</h5>
+          <h5 class="card-title text-success">Price: {{book.price}}€</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row jumbotron">
+    <div class="col-xs-12 payment">
+      <p class="float-right">Amount to pay : <del class="text-danger">{{totalPrice}}€</del> <i class="text-success"> {{totalPriceAfterOffer}}€</i></p>
+      <div *ngIf="selectedOffer?.type == 'percentage'">
+        <p>Applied Offer : <i class="text-success">Percentage</i></p>
+        <p>Reduction amount : <i class="text-success">{{selectedOffer?.value}}% Reduction</i></p>
+      </div>
+      <div *ngIf="selectedOffer?.type == 'minus'">
+        <p>Applied Offer : <i class="text-success">Minus</i></p>
+        <p>Reduction amount : <i class="text-success">{{selectedOffer?.value}}€ Deduction</i></p>
+      </div>
+      <div *ngIf="selectedOffer?.type == 'slice'">
+        <p>Applied Offer : <i class="text-success">Slice</i></p>
+        <p>Reduction amount : <i class="text-success">{{selectedOffer?.value}}€ On each {{selectedOffer?.sliceValue}}€</i></p>
+      </div>
+
+      <a class="btn btn-success float-right" (click)="pay()">Pay <i class="fa fa-money"></i></a>
+    </div>
+  </div>
+</div>

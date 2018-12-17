@@ -1,0 +1,5 @@
+<nav class="navbar navbar-light bg-light fixed-top justify-content-between">
+  <a class="navbar-brand">Henri Potier BookStore</a>
+  <button *ngIf="toCart" class="btn btn-dark my-2 my-sm-0" type="button" routerLink="/cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge badge-success">{{cartNumber}}</span></button>
+  <button *ngIf="!toCart" class="btn btn-dark my-2 my-sm-0" type="button" routerLink="/shop"><i class="fa fa-book"></i> Shop</button>
+</nav>
